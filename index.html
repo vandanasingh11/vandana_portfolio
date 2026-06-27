@@ -3,222 +3,757 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vandana_portfolio
-    </title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vandana Singh | Premium Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css?v=1.0.1">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Ambient Glow Effects -->
+    <div class="ambient-glows">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="glow-3"></div>
+    </div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Floating Navigation Bar -->
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo"></h1>
+            <div class="logo-container">
+                <div class="logo-circle"></div>
+                <a href="#home" class="logo-text">Vandana.singh</a>
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                 <li><a href="#projects">Projects</a></li> 
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                 <li><a href="#achievements">Achievements</a></li>
-                <!-- <li><a href="#research">Research</a></li> -->
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <canvas id="hero-particles" class="hero-particle-canvas"></canvas>
         <div class="container hero-container">
             <div class="hero-content">
-                <h2>Hi, I'm <span class="highlight">Vandana singh</span></h2>
-                <p class="subtitle">Computer Science Student | Developer | Problem Solver</p>
-                <p class="description">Motivated college student with strong interest in technology and continuous learning. Skilled in communication, teamwork, and problem-solving. Actively building practical experience through projects and internships. Eager to learn, grow, and contribute to impactful work environments</p>
-                <div class="cta-buttons">
-                    <a href="VS resume updated(2).pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <div class="hero-tagline">
+                    <span class="hero-tagline-dot"></span>
+                    Available for Internships
+                </div>
+                <h1>Hi, I'm <span class="gradient-text">Vandana Singh</span></h1>
+                
+                <div class="hero-role-wrapper">
+                    <span>A&nbsp;</span>
+                    <span class="hero-role" id="typed-roles"></span>
+                </div>
+                
+                <p class="hero-description">
+                    Computer Science BCA student at Amity University. I specialize in designing and engineering high-fidelity web applications, data-driven automation systems, and modular programming architectures.
+                </p>
+                
+                <div class="cta-group">
+                    <a href="VS resume updated(2).pdf" download class="btn-premium btn-premium-primary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn-premium btn-premium-secondary">
+                        Get In Touch <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="3">0</span>
+                        <span class="stat-lbl">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="5">0</span>
+                        <span class="stat-lbl">Certifications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" data-target="2">0</span>
+                        <span class="stat-lbl">Hackathons</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="img.jpg" alt="vandana Profile Picture">
+            
+            <div class="hero-image-area">
+                <div class="profile-glow-ring">
+                    <div class="profile-image-container">
+                        <img src="img.jpg" alt="Vandana Singh Profile Picture">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- About & Education Section -->
+    <section id="about" class="section reveal">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a student at [Amity University Chhattisgarh] pursuing a Bachelor's degree in Computer Science. I'm passionate about and always eager to learn new technologies.</p>
-                    <p>When I'm not coding, you can find me participating in hackathons, contributing to open-source projects, or exploring the latest tech trends.</p>
-                    <div class="education">
-                        <h3>Education</h3>
-                        <p><strong>[Amity University Chhattisgarh]</strong></p>
-                        <p>Bachelor of Computer Application</p>
-                        <p>Expected Graduation: May 2027</p>
-                        <p>CGPA : 7.5/10</p>
+            <h2 class="section-title">About & Experience</h2>
+            <p class="section-subtitle">A trace of my educational foundation and growing engineering journey.</p>
+            
+            <div class="about-grid">
+                <!-- Info Summary Card -->
+                <div class="glass-card about-intro-card">
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm currently pursuing my Bachelor of Computer Applications (BCA) at Amity University Chhattisgarh, graduating in May 2027. I have built a solid foundation in programming paradigms, software logic, and visual systems.
+                    </p>
+                    <p>
+                        My focus centers on constructing robust web solutions, optimizing workflows, and integrating AI micro-services into user interfaces. I actively participate in hackathons to test my capabilities, collaborate under pressure, and develop scalable prototypes.
+                    </p>
+                    
+                    <h3 style="margin-top: 2rem;">Experience</h3>
+                    <div class="experience-list">
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="exp-role-company">
+                                    <h4>Open Source Contributor</h4>
+                                    <span>GitHub Community</span>
+                                </div>
+                                <span class="exp-duration">2024 - Present</span>
+                            </div>
+                            <p class="exp-desc">
+                                Collaborating on public Python utilities, fixing layout structures, and participating in local developer meetups to build robust software.
+                            </p>
+                        </div>
+                        <div class="experience-card" style="margin-top: 1.5rem;">
+                            <div class="exp-header">
+                                <div class="exp-role-company">
+                                    <h4>Technical Core Member</h4>
+                                    <span>Amity University Coding Club</span>
+                                </div>
+                                <span class="exp-duration">2025 - Present</span>
+                            </div>
+                            <p class="exp-desc">
+                                Leading hands-on peer coding sessions on C++ fundamentals, organizing intra-university hackathons, and constructing custom scripts for event operations.
+                            </p>
+                        </div>
                     </div>
-                     <div class="education">
-                        <h3>Education</h3>
-                        <p><strong>[New Era Progressive School]</strong></p>
-                        <p>10th CBSE BOARD 76%</p>
-                        <p>12th CBSE BOARD 79%</p>
+                </div>
+                
+                <!-- Education Timeline Card -->
+                <div class="glass-card">
+                    <h3>Education Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-meta">Expected 2024 - 2027</div>
+                            <div class="timeline-title">Bachelor of Computer Applications (BCA)</div>
+                            <div class="timeline-location">Amity University Chhattisgarh</div>
+                            <p class="timeline-desc">Secured a current cumulative grade point average of 7.5/10. Specialize in Data Structures, Database Systems, and Object-Oriented Software Principles.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-meta">Graduated 2024</div>
+                            <div class="timeline-title">Higher Secondary Education (12th Grade)</div>
+                            <div class="timeline-location">New Era Progressive School</div>
+                            <p class="timeline-desc">CBSE Board - Aggregate Score: 79%. Core focus on Mathematics, Informatics Practices, and Science.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-meta">Graduated 2022</div>
+                            <div class="timeline-title">Secondary Education (10th Grade)</div>
+                            <div class="timeline-location">New Era Progressive School</div>
+                            <p class="timeline-desc">CBSE Board - Aggregate Score: 76%.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A showcase of systems and tools I have engineered to solve real-world problems.</p>
+            
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Course Management System</h3>
-                    <p>Python-based system for efficient course management.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
+                <!-- Project 1 -->
+                <div class="glass-card project-card">
+                    <div class="project-image-box">
+                        <div class="mock-browser-frame">
+                            <div class="mock-browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-browser-content project-vittora-art">
+                                <div class="vittora-dashboard">
+                                    <div class="vittora-header"></div>
+                                    <div class="vittora-grid">
+                                        <div class="vittora-chart">
+                                            <div class="vittora-bar"></div>
+                                            <div class="vittora-bar"></div>
+                                            <div class="vittora-bar"></div>
+                                            <div class="vittora-bar"></div>
+                                        </div>
+                                        <div class="vittora-stats">
+                                            <div class="vittora-card">AI Finance</div>
+                                            <div class="vittora-card">+$240</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/vandanasingh11/Vittora_AI" target="_blank" class="project-link-btn" title="GitHub Source"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link-btn" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <a href="https://github.com/chiragkeswani/Course-Management-System-" class="project-link" target="_blank">View Project →</a>
+                    <div class="project-info">
+                        <h3 class="project-title">Vittora AI</h3>
+                        <p class="project-desc">
+                            An AI-powered personal finance tracker that helps users manage expenses, budget layouts, and analyze transaction histories using python automation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Vittora AI</h3>
-                    <p>AI-powered personal finance tracker for managing expenses and budgets.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Python</span>
+
+                <!-- Project 2 -->
+                <div class="glass-card project-card">
+                    <div class="project-image-box">
+                        <div class="mock-browser-frame">
+                            <div class="mock-browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-browser-content project-course-art">
+                                <div class="course-terminal">
+                                    <div class="terminal-line">&gt; python manage.py runserver</div>
+                                    <div class="terminal-line">Serving on http://127.0.0.1:8000/</div>
+                                    <div class="terminal-line">[OK] Database connected.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/chiragkeswani/Course-Management-System-" target="_blank" class="project-link-btn" title="GitHub Source"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link-btn" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <a href="https://github.com/vandanasingh11/Vittora_AI" class="project-link" target="_blank">View Project →</a>
+                    <div class="project-info">
+                        <h3 class="project-title">Course Management System</h3>
+                        <p class="project-desc">
+                            A highly optimized CLI database application built in Python for managing class enrollments, curriculums, student directories, and teacher assignments.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">OOP</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Report card printer</h3>
-                    <p>Python application for generating and printing student report cards</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
+
+                <!-- Project 3 -->
+                <div class="glass-card project-card">
+                    <div class="project-image-box">
+                        <div class="mock-browser-frame">
+                            <div class="mock-browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mock-browser-content project-printer-art">
+                                <i class="fas fa-cog printer-gear printer-gear-1"></i>
+                                <i class="fas fa-cog printer-gear printer-gear-2"></i>
+                                <div class="printer-paper">
+                                    <div class="paper-line medium"></div>
+                                    <div class="paper-line short"></div>
+                                    <div class="paper-line medium"></div>
+                                    <div class="paper-grade">A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/vandanasingh11/Report_card_printer" target="_blank" class="project-link-btn" title="GitHub Source"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link-btn" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                    <a href="https://github.com/vandanasingh11/Report_card_printer" class="project-link" target="_blank">View Project →</a>
+                    <div class="project-info">
+                        <h3 class="project-title">Report Card Printer</h3>
+                        <p class="project-desc">
+                            An automated desktop utility script in Python that reads student grades, processes marks percentages, and formats print-ready report card templates.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">File I/O</span>
+                            <span class="tech-badge">Reportlab</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Technical Capabilities</h2>
+            <p class="section-subtitle">Proficiencies and utilities I leverage to bring digital products to life.</p>
+            
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Java Script</li>
-                        <li>C++
-                        </li>
-                        <li>C
-                        </li>
-                        <li>SQL</li>
-                    </ul>
+                <!-- Languages -->
+                <div class="glass-card skill-category-card">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>HTML5 / CSS3</span><span>95%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>JavaScript</span><span>85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Python</span><span>85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>C++</span><span>80%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>SQL</span><span>85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML/CSS</li>
-                      <li>java</li>
-                        <li>Responsive Design</li>
-                        <li>Bootstrap</li> -->
-                    </ul>
+
+                <!-- Frontend -->
+                <div class="glass-card skill-category-card">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Frameworks</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Responsive Design</span><span>90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Bootstrap Styles</span><span>85%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Vanilla UI Development</span><span>90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Core Java (Swing UI)</span><span>70%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="70%"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <!-- <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>MongoDB</li>
-                        <li>REST APIs</li>
-                    </ul> -->
+
+                <!-- Backend & Tools -->
+                <div class="glass-card skill-category-card">
+                    <h3><i class="fas fa-toolbox"></i> Developer Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Git & GitHub Workflows</span><span>90%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>VS Code Customizations</span><span>95%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Docker Containerization</span><span>70%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-percent"><span>Database Architecture</span><span>80%</span></div>
+                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="80%"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>Git/GitHub</li>
-                        <li>VS Code</li>
-                         <li> docker</li>
-                        <!-- <li>Figma</li>
-                        <li>Postman</li> -->
-                    </ul>
+            </div>
+
+            <!-- Certifications Grid -->
+            <h2 class="section-title" style="margin-top: 6rem;">Credentials & Certifications</h2>
+            <div class="certs-grid">
+                <!-- Cert 1 -->
+                <div class="glass-card cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <div class="cert-info">
+                        <h4>Python for Data Science</h4>
+                        <div class="cert-issuer">Cognitive Class AI / IBM</div>
+                        <a href="#" class="cert-link">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="glass-card cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <div class="cert-info">
+                        <h4>HTML, CSS & JS for Web Dev</h4>
+                        <div class="cert-issuer">Johns Hopkins University (Coursera)</div>
+                        <a href="#" class="cert-link">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="glass-card cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <div class="cert-info">
+                        <h4>Git & GitHub Version Control</h4>
+                        <div class="cert-issuer">Google Career Certificates</div>
+                        <a href="#" class="cert-link">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub contribution board mockup -->
+            <div class="glass-card github-contribution-card reveal">
+                <h3><i class="fab fa-github"></i> Open Source Contributions (Mock Graph)</h3>
+                <div class="git-graph-wrapper">
+                    <div class="git-graph" id="git-contribution-graph">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+                <div class="git-graph-footer">
+                    <span>Learn more at <a href="https://github.com/vandanasingh11" target="_blank" style="color: var(--purple); text-decoration: none;">github.com/vandanasingh11</a></span>
+                    <div class="git-graph-legend">
+                        <span>Less</span>
+                        <div class="git-square"></div>
+                        <div class="git-square l-1"></div>
+                        <div class="git-square l-2"></div>
+                        <div class="git-square l-3"></div>
+                        <div class="git-square l-4"></div>
+                        <span>More</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's coordinate on new developer opportunities, internships, or open source projects.</p>
+            
+            <div class="contact-grid">
+                <!-- Info links -->
+                <div class="contact-info-panel">
+                    <div>
+                        <h3>Reach Out Directly</h3>
+                        <p>Have an interesting project or opening? I'd love to chat. Reach out via email or connect on social platforms.</p>
+                    </div>
+                    
+                    <div class="contact-channels">
+                        <a href="mailto:vandanasingh001105@gmail.com" class="glass-card contact-channel-card">
+                            <div class="channel-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="channel-details">
+                                <h4>Email Address</h4>
+                                <p>vandanasingh001105@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank" class="glass-card contact-channel-card">
+                            <div class="channel-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="channel-details">
+                                <h4>LinkedIn Profile</h4>
+                                <p>linkedin.com/in/vandanasingh011</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/vandanasingh11" target="_blank" class="glass-card contact-channel-card">
+                            <div class="channel-icon"><i class="fab fa-github"></i></div>
+                            <div class="channel-details">
+                                <h4>GitHub Profile</h4>
+                                <p>github.com/vandanasingh11</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="glass-card">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <input type="text" id="form-name" class="form-input" placeholder=" " required>
+                                <label for="form-name" class="form-label">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="form-email" class="form-input" placeholder=" " required>
+                                <label for="form-email" class="form-label">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form-subject" class="form-input" placeholder=" " required>
+                            <label for="form-subject" class="form-label">Subject</label>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <textarea id="form-message" class="form-input" placeholder=" " required></textarea>
+                            <label for="form-message" class="form-label">Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-premium btn-premium-primary" style="width: 100%; justify-content: center;">
+                            Send Message &nbsp;<i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div id="form-status" class="form-status"></div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-
-    </section> -->
-
-   <section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="contact-intro">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-
-        <div class="contact-methods">
-
-            <!-- Email -->
-            <div class="contact-item">
-                <i class="fas fa-envelope contact-icon"></i>
-                <h3>Email</h3>
-                <p>
-                    <a href="mailto:vandanasingh001105@gmail.com">
-                        vandanasingh001105@gmail.com
-                    </a>
-                </p>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-text">
+                &copy; 2026 Vandana Singh. Made with passion & precision.
             </div>
-
-            <!-- LinkedIn -->
-            <div class="contact-item">
-                <i class="fab fa-linkedin contact-icon"></i>
-                <h3>LinkedIn</h3>
-                <p>
-                    <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank">
-                        https://www.linkedin.com/in/vandanasingh011
-                    </a>
-                </p>
+            <div class="footer-socials">
+                <a href="mailto:vandanasingh001105@gmail.com" class="footer-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank" class="footer-icon-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/vandanasingh11" target="_blank" class="footer-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
-
-            <!-- GitHub -->
-            <div class="contact-item">
-                <i class="fab fa-github contact-icon"></i>
-                <h3>GitHub</h3>
-                <p>
-                    <a href="https://github.com/vandanasingh11" target="_blank">
-                        https://github.com/vandanasingh11
-                    </a>
-                </p>
-            </div>
-
         </div>
-    </div>
-</section>
+    </footer>
 
-<footer>
-    <div class="container">
-        <div class="footer-social">
+    <!-- Interactive Client JS -->
+    <script>
+        // Cursor Light Position Tracking
+        const cursorGlow = document.getElementById('cursor-glow');
+        window.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
 
-            <!-- Email -->
-            <a href="mailto:vandanasingh001105@gmail.com" class="footer-icon" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
+        // Typewriter Effect
+        const roles = ["Full Stack Developer", "Cloud Enthusiast", "AI Learner"];
+        let currentRoleIdx = 0;
+        let currentCharIdx = 0;
+        let isDeleting = false;
+        const typedRolesSpan = document.getElementById('typed-roles');
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/vandanasingh011"
-               target="_blank" class="footer-icon" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
+        function typeEffect() {
+            const currentRole = roles[currentRoleIdx];
+            if (isDeleting) {
+                typedRolesSpan.textContent = currentRole.substring(0, currentCharIdx - 1);
+                currentCharIdx--;
+            } else {
+                typedRolesSpan.textContent = currentRole.substring(0, currentCharIdx + 1);
+                currentCharIdx++;
+            }
 
-            <!-- GitHub -->
-            <a href="https://github.com/vandanasingh11"
-               target="_blank" class="footer-icon" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
+            if (!isDeleting && currentCharIdx === currentRole.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, pauseTime);
+            } else if (isDeleting && currentCharIdx === 0) {
+                isDeleting = false;
+                currentRoleIdx = (currentRoleIdx + 1) % roles.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeEffect, 1000);
+            generateGithubMockGraph();
+        });
 
-        </div>
-    </div>
-</footer>
+        // Stats Counters Animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-num');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 30; // 30 steps
+                const interval = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = target + '+';
+                        clearInterval(interval);
+                    } else {
+                        stat.textContent = Math.ceil(current) + '+';
+                    }
+                }, 40);
+            });
+        }
+
+        // Skills Progress Bar Animations & Active Navigation Indicators
+        const skillBars = document.querySelectorAll('.skill-bar-inner');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(document.querySelector('.hero-stats'));
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Specific trigger for skill bars animation inside skills section
+                    if (entry.target.id === 'skills') {
+                        skillBars.forEach(bar => {
+                            const width = bar.getAttribute('data-width');
+                            bar.style.width = width;
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Sync Active Nav Link
+        window.addEventListener('scroll', () => {
+            let currentSec = 'home';
+            sections.forEach(sec => {
+                const secTop = sec.offsetTop - 120;
+                if (window.scrollY >= secTop) {
+                    currentSec = sec.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSec) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Generate Mock GitHub Contribution Grid
+        function generateGithubMockGraph() {
+            const graph = document.getElementById('git-contribution-graph');
+            const totalSquares = 53 * 7; // columns x rows
+            
+            // Loop through columns
+            for (let i = 0; i < 53; i++) {
+                const col = document.createElement('div');
+                col.className = 'git-col';
+                
+                for (let j = 0; j < 7; j++) {
+                    const square = document.createElement('div');
+                    square.className = 'git-square';
+                    
+                    // Add random density levels
+                    const rand = Math.random();
+                    let level = '';
+                    let contributions = 0;
+                    if (rand > 0.85) { level = 'l-4'; contributions = Math.floor(Math.random() * 8) + 12; }
+                    else if (rand > 0.70) { level = 'l-3'; contributions = Math.floor(Math.random() * 5) + 7; }
+                    else if (rand > 0.50) { level = 'l-2'; contributions = Math.floor(Math.random() * 4) + 3; }
+                    else if (rand > 0.25) { level = 'l-1'; contributions = Math.floor(Math.random() * 2) + 1; }
+                    
+                    if (level) {
+                        square.classList.add(level);
+                    }
+                    
+                    // Simple simulated dates for tooltip
+                    const date = new Date();
+                    date.setDate(date.getDate() - (totalSquares - (i * 7 + j)));
+                    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    square.setAttribute('data-tooltip', `${contributions} contributions on ${dateStr}`);
+                    
+                    col.appendChild(square);
+                }
+                graph.appendChild(col);
+            }
+        }
+
+        // Floating Hero Particles Canvas
+        const canvas = document.getElementById('hero-particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.4 - 0.2;
+                this.speedY = Math.random() * 0.4 - 0.2;
+                this.color = Math.random() > 0.5 ? 'rgba(139, 92, 246, 0.4)' : 'rgba(6, 182, 212, 0.3)';
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(Math.floor(canvas.width / 15), 80);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // Contact Form Mock Submission Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending Message <i class="fas fa-spinner fa-spin"></i>';
+            
+            setTimeout(() => {
+                status.className = 'form-status success';
+                status.textContent = 'Thank you! Your message has been sent successfully.';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message &nbsp;<i class="fas fa-paper-plane"></i>';
+                e.target.reset();
+                
+                // Clear success message after 5 seconds
+                setTimeout(() => {
+                    status.style.display = 'none';
+                }, 5000);
+            }, 1800);
+        }
+    </script>
+</body>
+</html>
