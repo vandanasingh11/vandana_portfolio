@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vandana Singh | Premium Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=1.0.1">
+    <link rel="stylesheet" href="styles.css?v=1.4.0">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon CDN for tech logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
+
 <body>
 
     <!-- Ambient Glow Effects -->
@@ -20,18 +24,27 @@
 
     <!-- Floating Navigation Bar -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container navbar-container">
             <div class="logo-container">
-                <div class="logo-circle"></div>
-                <a href="#home" class="logo-text">Vandana.singh</a>
+                <div class="logo-circle-vs">VS</div>
+                <a href="#home" class="logo-text">Vandana Singh</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#focus">Focus</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="Vandana_Singh_Resume.pdf" target="_blank" class="btn-nav-resume">
+                    View Resume <i class="fa-regular fa-file-pdf"></i>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -40,126 +53,271 @@
         <canvas id="hero-particles" class="hero-particle-canvas"></canvas>
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-tagline">
-                    <span class="hero-tagline-dot"></span>
-                    Available for Internships
-                </div>
-                <h1>Hi, I'm <span class="gradient-text">Vandana Singh</span></h1>
-                
+                <div class="hero-tagline-text">Hello, I'm</div>
+                <h1 class="hero-name">Vandana Singh</h1>
+
                 <div class="hero-role-wrapper">
-                    <span>A&nbsp;</span>
+                    <span>I'm a&nbsp;</span>
                     <span class="hero-role" id="typed-roles"></span>
                 </div>
-                
+
                 <p class="hero-description">
-                    Computer Science BCA student at Amity University. I specialize in designing and engineering high-fidelity web applications, data-driven automation systems, and modular programming architectures.
+                    Aspiring Software Developer passionate about building practical applications, exploring modern technologies, and continuously improving through projects, hackathons, and hands-on learning.
                 </p>
-                
+
                 <div class="cta-group">
-                    <a href="VS resume updated(2).pdf" download class="btn-premium btn-premium-primary">
+                    <a href="Vandana_Singh_Resume.pdf" download="Vandana_Singh_Resume.pdf" class="btn-premium btn-premium-primary">
                         <i class="fas fa-download"></i> Download Resume
                     </a>
-                    <a href="#contact" class="btn-premium btn-premium-secondary">
-                        Get In Touch <i class="fas fa-arrow-right"></i>
+                    <a href="Vandana_Singh_Resume.pdf" target="_blank" class="btn-premium btn-premium-secondary">
+                        <i class="fa-regular fa-file-lines"></i> View Resume
                     </a>
                 </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="3">0</span>
-                        <span class="stat-lbl">Projects</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="5">0</span>
-                        <span class="stat-lbl">Certifications</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num" data-target="2">0</span>
-                        <span class="stat-lbl">Hackathons</span>
+
+                <div class="hero-socials-row">
+                    <span class="social-connect-label">Let's connect</span>
+                    <div class="social-icon-links">
+                        <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/vandanasingh11" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:vandanasingh001105@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#contact" title="Direct Contact" class="arrow-down-btn"><i class="fa-solid fa-arrow-down"></i></a>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Profile Orbit Section -->
             <div class="hero-image-area">
-                <div class="profile-glow-ring">
-                    <div class="profile-image-container">
-                        <img src="img.jpg" alt="Vandana Singh Profile Picture">
+                <div class="orbit-container">
+                    <!-- Orbit Rings (Background tracks) -->
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                    <div class="orbit-ring ring-3"></div>
+                    
+                    <!-- Orbiting Nodes -->
+                    <!-- Node 1: Developer (Track 2) -->
+                    <div class="node-orbit-wrapper dev-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-purple">
+                                <div class="node-icon"><i class="fa-solid fa-laptop"></i></div>
+                            </div>
+                            <div class="node-label">Developer</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 2: Cloud Explorer (Track 1) -->
+                    <div class="node-orbit-wrapper cloud-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-blue">
+                                <div class="node-icon"><i class="fa-solid fa-cloud"></i></div>
+                            </div>
+                            <div class="node-label">Cloud Explorer</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 3: Problem Solver (Track 3) -->
+                    <div class="node-orbit-wrapper problem-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-cyan">
+                                <div class="node-icon"><i class="fa-solid fa-rocket"></i></div>
+                            </div>
+                            <div class="node-label">Problem Solver</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 4: BCA Student (Track 2) -->
+                    <div class="node-orbit-wrapper bca-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-blue">
+                                <div class="node-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            </div>
+                            <div class="node-label">BCA Student</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 5: Lifelong Learner (Track 1) -->
+                    <div class="node-orbit-wrapper learner-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-cyan">
+                                <div class="node-icon"><i class="fa-solid fa-book-open"></i></div>
+                            </div>
+                            <div class="node-label">Lifelong Learner</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 6: Team Player (Track 3) -->
+                    <div class="node-orbit-wrapper team-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-purple">
+                                <div class="node-icon"><i class="fa-solid fa-users"></i></div>
+                            </div>
+                            <div class="node-label">Team Player</div>
+                        </div>
+                    </div>
+
+                    <!-- Node 7: Code Enthusiast (Track 2) -->
+                    <div class="node-orbit-wrapper code-orbit">
+                        <div class="node-orbit-inner">
+                            <div class="orbit-node node-purple">
+                                <div class="node-icon"><i class="fa-solid fa-code"></i></div>
+                            </div>
+                            <div class="node-label">Code Enthusiast</div>
+                        </div>
+                    </div>
+
+                    <!-- Central Profile Picture & Cursive Nameplate Container -->
+                    <div class="central-profile-area">
+                        <div class="inner-profile-ring">
+                            <div class="profile-avatar-container">
+                                <img src="img.jpg" alt="Vandana Singh Profile Picture">
+                            </div>
+                        </div>
+                        
+                        <!-- Cursive Nameplate Card -->
+                        <div class="profile-nameplate">
+                            <div class="nameplate-title">Vandana Singh</div>
+                            <div class="nameplate-subtitle">Aspiring Software Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Stats Bar -->
+            <div class="hero-stats-bar">
+                <div class="stat-bar-item">
+                    <div class="stat-bar-icon icon-purple"><i class="fa-solid fa-code"></i></div>
+                    <div class="stat-bar-text">
+                        <span class="stat-value" data-target="3">0</span>
+                        <span class="stat-bar-label">Projects Built</span>
+                    </div>
+                </div>
+                <div class="stat-bar-divider"></div>
+                <div class="stat-bar-item">
+                    <div class="stat-bar-icon icon-pink"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="stat-bar-text">
+                        <span class="stat-value" data-target="5">0</span>
+                        <span class="stat-bar-label">Certifications</span>
+                    </div>
+                </div>
+                <div class="stat-bar-divider"></div>
+                <div class="stat-bar-item">
+                    <div class="stat-bar-icon icon-cyan"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="stat-bar-text">
+                        <span class="stat-value" data-target="2">0</span>
+                        <span class="stat-bar-label">Hackathons</span>
+                    </div>
+                </div>
+                <div class="stat-bar-divider"></div>
+                <div class="stat-bar-item">
+                    <div class="stat-bar-icon icon-blue"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-bar-text">
+                        <span class="stat-value" data-target="1">0</span>
+                        <span class="stat-bar-label">Leadership Role</span>
+                    </div>
+                </div>
+                <div class="stat-bar-divider"></div>
+                <div class="stat-bar-item">
+                    <div class="stat-bar-icon icon-purple"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="stat-bar-text">
+                        <span class="stat-bar-value-static">BCA</span>
+                        <span class="stat-bar-label">Amity University</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About & Education Section -->
+    <!-- About Section -->
     <section id="about" class="section reveal">
         <div class="container">
-            <h2 class="section-title">About & Experience</h2>
-            <p class="section-subtitle">A trace of my educational foundation and growing engineering journey.</p>
-            
-            <div class="about-grid">
-                <!-- Info Summary Card -->
-                <div class="glass-card about-intro-card">
-                    <h3>Who I Am</h3>
-                    <p>
-                        I'm currently pursuing my Bachelor of Computer Applications (BCA) at Amity University Chhattisgarh, graduating in May 2027. I have built a solid foundation in programming paradigms, software logic, and visual systems.
-                    </p>
-                    <p>
-                        My focus centers on constructing robust web solutions, optimizing workflows, and integrating AI micro-services into user interfaces. I actively participate in hackathons to test my capabilities, collaborate under pressure, and develop scalable prototypes.
-                    </p>
-                    
-                    <h3 style="margin-top: 2rem;">Experience</h3>
-                    <div class="experience-list">
-                        <div class="experience-card">
-                            <div class="exp-header">
-                                <div class="exp-role-company">
-                                    <h4>Open Source Contributor</h4>
-                                    <span>GitHub Community</span>
-                                </div>
-                                <span class="exp-duration">2024 - Present</span>
+            <div class="about-flex-container">
+                <!-- Left: Laptop Illustration -->
+                <div class="about-illustration-side">
+                    <div class="laptop-canvas">
+                        <div class="laptop-screen">
+                            <div class="code-editor-header">
+                                <span class="editor-dot dot-r"></span>
+                                <span class="editor-dot dot-y"></span>
+                                <span class="editor-dot dot-g"></span>
                             </div>
-                            <p class="exp-desc">
-                                Collaborating on public Python utilities, fixing layout structures, and participating in local developer meetups to build robust software.
-                            </p>
-                        </div>
-                        <div class="experience-card" style="margin-top: 1.5rem;">
-                            <div class="exp-header">
-                                <div class="exp-role-company">
-                                    <h4>Technical Core Member</h4>
-                                    <span>Amity University Coding Club</span>
-                                </div>
-                                <span class="exp-duration">2025 - Present</span>
+                            <div class="code-editor-body">
+                                <div class="edit-line"><span class="c-key">import</span> sys</div>
+                                <div class="edit-line"><span class="c-key">class</span> <span class="c-cls">Developer</span>:</div>
+                                <div class="edit-line">&nbsp;&nbsp;<span class="c-key">def</span> <span class="c-func">__init__</span>(self):</div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;self.name = <span class="c-str">"Vandana"</span></div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;self.role = <span class="c-str">"Developer"</span></div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;self.skills = [<span class="c-str">"Python"</span>, <span class="c-str">"Java"</span>]</div>
+                                <div class="edit-line">&nbsp;&nbsp;<span class="c-key">def</span> <span class="c-func">status</span>(self):</div>
+                                <div class="edit-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-key">return</span> <span class="c-str">"Code all day!"</span></div>
                             </div>
-                            <p class="exp-desc">
-                                Leading hands-on peer coding sessions on C++ fundamentals, organizing intra-university hackathons, and constructing custom scripts for event operations.
-                            </p>
                         </div>
+                        <div class="laptop-base"></div>
+                        <div class="laptop-base-glow"></div>
                     </div>
                 </div>
-                
-                <!-- Education Timeline Card -->
-                <div class="glass-card">
-                    <h3>Education Timeline</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-node"></div>
-                            <div class="timeline-meta">Expected 2024 - 2027</div>
-                            <div class="timeline-title">Bachelor of Computer Applications (BCA)</div>
-                            <div class="timeline-location">Amity University Chhattisgarh</div>
-                            <p class="timeline-desc">Secured a current cumulative grade point average of 7.5/10. Specialize in Data Structures, Database Systems, and Object-Oriented Software Principles.</p>
+
+                <!-- Right Contents -->
+                <div class="about-details-side">
+                    <div class="about-meta-tag">ABOUT ME</div>
+                    <h2 class="about-h2">Who I Am</h2>
+                    
+                    <ul class="about-bullet-points">
+                        <li>
+                            <span class="bullet-icon-wrapper purple"><i class="fa-solid fa-graduation-cap"></i></span>
+                            <span class="bullet-text-content">BCA student at Amity University Chhattisgarh</span>
+                        </li>
+                        <li>
+                            <span class="bullet-icon-wrapper cyan"><i class="fa-solid fa-heart"></i></span>
+                            <span class="bullet-text-content">Passionate about Software Development</span>
+                        </li>
+                        <li>
+                            <span class="bullet-icon-wrapper pink"><i class="fa-solid fa-cloud"></i></span>
+                            <span class="bullet-text-content">Interested in AI, Cloud Computing & Web Development</span>
+                        </li>
+                        <li>
+                            <span class="bullet-icon-wrapper blue"><i class="fa-solid fa-terminal"></i></span>
+                            <span class="bullet-text-content">Love building practical software projects</span>
+                        </li>
+                        <li>
+                            <span class="bullet-icon-wrapper purple"><i class="fa-solid fa-users"></i></span>
+                            <span class="bullet-text-content">Active participant in hackathons and tech communities</span>
+                        </li>
+                    </ul>
+
+                    <!-- Stats Row -->
+                    <div class="about-stats-row">
+                        <!-- Stat 1 -->
+                        <div class="glass-card stat-item-box border-purple">
+                            <div class="stat-icon-area"><i class="fa-solid fa-code"></i></div>
+                            <div class="stat-value" data-target="7">0.00</div>
+                            <div class="stat-label">CGPA<br>(Current)</div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-node"></div>
-                            <div class="timeline-meta">Graduated 2024</div>
-                            <div class="timeline-title">Higher Secondary Education (12th Grade)</div>
-                            <div class="timeline-location">New Era Progressive School</div>
-                            <p class="timeline-desc">CBSE Board - Aggregate Score: 79%. Core focus on Mathematics, Informatics Practices, and Science.</p>
+
+                        <!-- Stat 2 -->
+                        <div class="glass-card stat-item-box border-cyan">
+                            <div class="stat-icon-area"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="stat-value" data-target="3">0</div>
+                            <div class="stat-label">Projects<br>Built</div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-node"></div>
-                            <div class="timeline-meta">Graduated 2022</div>
-                            <div class="timeline-title">Secondary Education (10th Grade)</div>
-                            <div class="timeline-location">New Era Progressive School</div>
-                            <p class="timeline-desc">CBSE Board - Aggregate Score: 76%.</p>
+
+                        <!-- Stat 3 -->
+                        <div class="glass-card stat-item-box border-pink">
+                            <div class="stat-icon-area"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="stat-value" data-target="5">0</div>
+                            <div class="stat-label">Certifications<br>Earned</div>
+                        </div>
+
+                        <!-- Stat 4 -->
+                        <div class="glass-card stat-item-box border-blue">
+                            <div class="stat-icon-area"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="stat-value" data-target="2">0</div>
+                            <div class="stat-label">Hackathons<br>Participated</div>
+                        </div>
+
+                        <!-- Stat 5 -->
+                        <div class="glass-card stat-item-box border-purple">
+                            <div class="stat-icon-area"><i class="fa-solid fa-users"></i></div>
+                            <div class="stat-value" data-target="1">0</div>
+                            <div class="stat-label">Leadership<br>Role</div>
                         </div>
                     </div>
                 </div>
@@ -167,122 +325,394 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Education Section (Horizontal Timeline) -->
+    <section id="education" class="section reveal">
+        <div class="container">
+            <div class="section-top-tag text-purple">EDUCATION</div>
+            <div class="horizontal-timeline-wrapper">
+                <div class="timeline-horizontal-line"></div>
+                
+                <!-- Step 1 -->
+                <div class="horizontal-timeline-step">
+                    <div class="timeline-time-label">2024 – 2027 (Expected)</div>
+                    <div class="timeline-node glow-purple"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="glass-card timeline-card border-purple">
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <h4 class="timeline-inst">Amity University Chhattisgarh</h4>
+                        <div class="timeline-badge-label">Current: CGPA 7.98 / 10</div>
+                        <div class="timeline-sub-course">
+                            <h5>Relevant Coursework:</h5>
+                            <ul>
+                                <li>Data Structures</li>
+                                <li>Database Management Systems</li>
+                                <li>Operating Systems</li>
+                                <li>Computer Networks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="horizontal-timeline-step">
+                    <div class="timeline-time-label">2022 – 2024</div>
+                    <div class="timeline-node glow-cyan"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="glass-card timeline-card border-cyan">
+                        <h3>Higher Secondary (Class XII)</h3>
+                        <h4 class="timeline-inst">New Era Progressive School</h4>
+                        <div class="timeline-badge-label">Commerce Stream | CBSE</div>
+                        <div class="percentage-badge">79%</div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="horizontal-timeline-step">
+                    <div class="timeline-time-label">2021 – 2022</div>
+                    <div class="timeline-node glow-pink"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="glass-card timeline-card border-pink">
+                        <h3>Secondary (Class X)</h3>
+                        <h4 class="timeline-inst">New Era Progressive School</h4>
+                        <div class="timeline-badge-label">CBSE</div>
+                        <div class="percentage-badge">76%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Leadership Section -->
+    <section id="experience" class="section reveal">
+        <div class="container">
+            <div class="section-top-tag text-pink">EXPERIENCE & LEADERSHIP</div>
+            <div class="experience-split-grid">
+                <!-- Left timeline -->
+                <div class="experience-vertical-timeline">
+                    <div class="timeline-v-line"></div>
+
+                    <!-- Row 1 -->
+                    <div class="timeline-v-row">
+                        <div class="timeline-v-node glow-pink"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="timeline-v-info">
+                            <span class="timeline-v-date">Nov 2025 – Present</span>
+                            <h3>AI Fast Track Intern</h3>
+                            <h4 class="timeline-v-inst text-pink">AGNIRVA AI</h4>
+                            <p>Completed a 100+ hour AI internship. Built foundations in Machine Learning, Generative AI, and prompt engineering through hands-on learning.</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="timeline-v-row">
+                        <div class="timeline-v-node glow-cyan"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <div class="timeline-v-info">
+                            <span class="timeline-v-date">May 2025 – Aug 2026</span>
+                            <h3>DevOps & Cloud Lead</h3>
+                            <h4 class="timeline-v-inst text-cyan">DEVITY Club | Amity University Chhattisgarh</h4>
+                            <p>Organized cloud workshops, mentored peers, and promoted hands-on learning with cloud automation and modern development practices.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Right Quote Panel -->
+                <div class="experience-quote-side">
+                    <div class="experience-quote-box border-purple">
+                        <div class="quote-icon quote-open"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="quote-text-content">
+                            I enjoy turning ideas into real-world solutions and continuously learning technologies that create impact.
+                        </p>
+                        <div class="quote-icon quote-close"><i class="fa-solid fa-quote-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
     <section id="projects" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">A showcase of systems and tools I have engineered to solve real-world problems.</p>
+            <div class="projects-header-row">
+                <div class="section-top-tag text-cyan">FEATURED PROJECTS</div>
+                <a href="https://github.com/vandanasingh11" target="_blank" class="view-all-projects-link">
+                    View All Projects <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="projects-carousel-wrapper">
+                <!-- Carousel Left Arrow -->
+                <button class="carousel-nav-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+
+                <div class="projects-carousel-grid">
+                    <!-- Project 1 -->
+                    <div class="glass-card project-carousel-card border-purple">
+                        <div class="card-image-box">
+                            <img src="vittora_ai_project.png" alt="Vittora AI Dashboard">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-title-icon-row">
+                                <span class="proj-card-icon"><i class="fa-solid fa-wallet text-purple"></i></span>
+                                <h3>Vittora AI</h3>
+                            </div>
+                            <p class="proj-card-desc">
+                                AI-powered personal finance tracker to analyze expenses, manage budgets, and visualize spending habits.
+                            </p>
+                            <div class="proj-card-tags">
+                                <span class="tag-pill badge-purple">Python</span>
+                                <span class="tag-pill badge-cyan">HTML</span>
+                                <span class="tag-pill badge-pink">CSS</span>
+                                <span class="tag-pill badge-blue">JavaScript</span>
+                                <span class="tag-pill badge-purple">SQLite</span>
+                            </div>
+                            <div class="proj-card-links">
+                                <a href="#" class="btn-card-link">Live Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                                <a href="https://github.com/vandanasingh11/Vittora_AI" target="_blank" class="btn-card-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card project-carousel-card border-cyan">
+                        <div class="card-image-box">
+                            <img src="course_system_project.png" alt="Course Management System">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-title-icon-row">
+                                <span class="proj-card-icon"><i class="fa-solid fa-graduation-cap text-cyan"></i></span>
+                                <h3>Course Management System</h3>
+                            </div>
+                            <p class="proj-card-desc">
+                                Desktop application to manage courses, students, teachers, assignments, and grades efficiently.
+                            </p>
+                            <div class="proj-card-tags">
+                                <span class="tag-pill badge-purple">Python</span>
+                                <span class="tag-pill badge-cyan">Tkinter</span>
+                                <span class="tag-pill badge-blue">SQLite</span>
+                            </div>
+                            <div class="proj-card-links">
+                                <a href="#" class="btn-card-link">Live Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                                <a href="https://github.com/chiragkeswani/Course-Management-System-" target="_blank" class="btn-card-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card project-carousel-card border-pink">
+                        <div class="card-image-box">
+                            <img src="report_printer_project.png" alt="Report Card Printer">
+                        </div>
+                        <div class="card-content-area">
+                            <div class="card-title-icon-row">
+                                <span class="proj-card-icon"><i class="fa-solid fa-print text-pink"></i></span>
+                                <h3>Report Card Printer</h3>
+                            </div>
+                            <p class="proj-card-desc">
+                                Automated desktop utility to generate and print formatted report cards for students.
+                            </p>
+                            <div class="proj-card-tags">
+                                <span class="tag-pill badge-purple">Python</span>
+                                <span class="tag-pill badge-cyan">Tkinter</span>
+                            </div>
+                            <div class="proj-card-links">
+                                <a href="#" class="btn-card-link">Live Demo <i class="fa-solid fa-up-right-from-square"></i></a>
+                                <a href="https://github.com/vandanasingh11/Report_card_printer" target="_blank" class="btn-card-link">GitHub <i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Right Arrow -->
+                <button class="carousel-nav-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section reveal">
+        <div class="container">
+            <div class="skills-section-header">
+                <h2 class="skills-title">TECHNICAL <span class="gradient-text">SKILLS</span></h2>
+                <p class="skills-subtitle">Technologies and tools I use to build amazing things</p>
+                <div class="skills-header-decorator">
+                    <span class="decorator-bar"></span>
+                </div>
+            </div>
             
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="glass-card project-card">
-                    <div class="project-image-box">
-                        <div class="mock-browser-frame">
-                            <div class="mock-browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mock-browser-content project-vittora-art">
-                                <div class="vittora-dashboard">
-                                    <div class="vittora-header"></div>
-                                    <div class="vittora-grid">
-                                        <div class="vittora-chart">
-                                            <div class="vittora-bar"></div>
-                                            <div class="vittora-bar"></div>
-                                            <div class="vittora-bar"></div>
-                                            <div class="vittora-bar"></div>
-                                        </div>
-                                        <div class="vittora-stats">
-                                            <div class="vittora-card">AI Finance</div>
-                                            <div class="vittora-card">+$240</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="skills-cards-container">
+                <!-- Card 1: Languages -->
+                <div class="skills-card-modern">
+                    <div class="skills-card-header">
+                        <div class="category-icon-circle circle-purple">
+                            <i class="fa-solid fa-code"></i>
                         </div>
-                        <div class="project-overlay">
-                            <a href="https://github.com/vandanasingh11/Vittora_AI" target="_blank" class="project-link-btn" title="GitHub Source"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link-btn" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
+                        <span class="category-title">Languages</span>
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Vittora AI</h3>
-                        <p class="project-desc">
-                            An AI-powered personal finance tracker that helps users manage expenses, budget layouts, and analyze transaction histories using python automation.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">HTML/CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Bootstrap</span>
+                    <div class="skills-timeline-container timeline-purple">
+                        <div class="timeline-line"></div>
+                        <div class="skills-timeline-grid">
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-python-plain colored"></i>
+                                    <span class="skill-name">Python</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-java-plain colored"></i>
+                                    <span class="skill-name">Java</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-cplusplus-plain colored"></i>
+                                    <span class="skill-name">C++</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-c-plain colored"></i>
+                                    <span class="skill-name">C</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass-card project-card">
-                    <div class="project-image-box">
-                        <div class="mock-browser-frame">
-                            <div class="mock-browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mock-browser-content project-course-art">
-                                <div class="course-terminal">
-                                    <div class="terminal-line">&gt; python manage.py runserver</div>
-                                    <div class="terminal-line">Serving on http://127.0.0.1:8000/</div>
-                                    <div class="terminal-line">[OK] Database connected.</div>
-                                </div>
-                            </div>
+                <!-- Card 2: Web -->
+                <div class="skills-card-modern">
+                    <div class="skills-card-header">
+                        <div class="category-icon-circle circle-cyan">
+                            <i class="fa-solid fa-globe"></i>
                         </div>
-                        <div class="project-overlay">
-                            <a href="https://github.com/chiragkeswani/Course-Management-System-" target="_blank" class="project-link-btn" title="GitHub Source"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link-btn" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
+                        <span class="category-title">Web</span>
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Course Management System</h3>
-                        <p class="project-desc">
-                            A highly optimized CLI database application built in Python for managing class enrollments, curriculums, student directories, and teacher assignments.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">SQL</span>
-                            <span class="tech-badge">OOP</span>
+                    <div class="skills-timeline-container timeline-cyan">
+                        <div class="timeline-line"></div>
+                        <div class="skills-timeline-grid">
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-html5-plain colored"></i>
+                                    <span class="skill-name">HTML</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-css3-plain colored"></i>
+                                    <span class="skill-name">CSS</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-javascript-plain colored"></i>
+                                    <span class="skill-name">JavaScript</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="glass-card project-card">
-                    <div class="project-image-box">
-                        <div class="mock-browser-frame">
-                            <div class="mock-browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mock-browser-content project-printer-art">
-                                <i class="fas fa-cog printer-gear printer-gear-1"></i>
-                                <i class="fas fa-cog printer-gear printer-gear-2"></i>
-                                <div class="printer-paper">
-                                    <div class="paper-line medium"></div>
-                                    <div class="paper-line short"></div>
-                                    <div class="paper-line medium"></div>
-                                    <div class="paper-grade">A</div>
-                                </div>
-                            </div>
+                <!-- Card 3: Database -->
+                <div class="skills-card-modern">
+                    <div class="skills-card-header">
+                        <div class="category-icon-circle circle-pink">
+                            <i class="fa-solid fa-database"></i>
                         </div>
-                        <div class="project-overlay">
-                            <a href="https://github.com/vandanasingh11/Report_card_printer" target="_blank" class="project-link-btn" title="GitHub Source"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link-btn" title="Live Preview"><i class="fas fa-external-link-alt"></i></a>
+                        <span class="category-title">Database</span>
+                    </div>
+                    <div class="skills-timeline-container timeline-pink">
+                        <div class="timeline-line"></div>
+                        <div class="skills-timeline-grid">
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="fa-solid fa-database" style="color: #3b82f6;"></i>
+                                    <span class="skill-name">SQL</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-sqlite-plain colored"></i>
+                                    <span class="skill-name">SQLite</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Report Card Printer</h3>
-                        <p class="project-desc">
-                            An automated desktop utility script in Python that reads student grades, processes marks percentages, and formats print-ready report card templates.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">File I/O</span>
-                            <span class="tech-badge">Reportlab</span>
+                </div>
+
+                <!-- Card 4: Tools -->
+                <div class="skills-card-modern">
+                    <div class="skills-card-header">
+                        <div class="category-icon-circle circle-purple">
+                            <i class="fa-solid fa-toolbox"></i>
+                        </div>
+                        <span class="category-title">Tools</span>
+                    </div>
+                    <div class="skills-timeline-container timeline-purple">
+                        <div class="timeline-line"></div>
+                        <div class="skills-timeline-grid">
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-git-plain colored"></i>
+                                    <span class="skill-name">Git</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="fa-brands fa-github text-white" style="color: #ffffff;"></i>
+                                    <span class="skill-name">GitHub</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="devicon-vscode-plain colored"></i>
+                                    <span class="skill-name">VS Code</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Exploring -->
+                <div class="skills-card-modern">
+                    <div class="skills-card-header">
+                        <div class="category-icon-circle circle-cyan">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <span class="category-title">Exploring</span>
+                    </div>
+                    <div class="skills-timeline-container timeline-cyan">
+                        <div class="timeline-line"></div>
+                        <div class="skills-timeline-grid">
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="fa-solid fa-diagram-project" style="color: #10b981;"></i>
+                                    <span class="skill-name">DSA</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="fa-solid fa-cloud" style="color: #3b82f6;"></i>
+                                    <span class="skill-name">Cloud</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="skill-info">
+                                    <i class="fa-solid fa-brain" style="color: #a78bfa;"></i>
+                                    <span class="skill-name">AI</span>
+                                </div>
+                                <div class="timeline-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,213 +720,143 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">Technical Capabilities</h2>
-            <p class="section-subtitle">Proficiencies and utilities I leverage to bring digital products to life.</p>
-            
-            <div class="skills-grid">
-                <!-- Languages -->
-                <div class="glass-card skill-category-card">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>HTML5 / CSS3</span><span>95%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="95%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>JavaScript</span><span>85%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Python</span><span>85%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>C++</span><span>80%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>SQL</span><span>85%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
-                        </div>
-                    </div>
+    <!-- Certifications & Focus Section (Side-By-Side Row) -->
+    <section id="certifications" class="section reveal">
+        <div class="container side-by-side-grid">
+            <!-- Left Side: Certifications -->
+            <div class="certs-column">
+                <div class="certs-header-box">
+                    <div class="section-top-tag text-cyan">CERTIFICATIONS</div>
+                    <a href="#" class="view-all-certs">View All <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-
-                <!-- Frontend -->
-                <div class="glass-card skill-category-card">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend Frameworks</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Responsive Design</span><span>90%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
+                <div class="certs-horizontal-scroll">
+                    <!-- Cert 1 -->
+                    <div class="glass-card cert-scroll-item border-cyan">
+                        <div class="cert-logo-box infosys-logo">
+                            <span class="logo-txt-green">Infosys</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Bootstrap Styles</span><span>85%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="85%"></div></div>
+                        <div class="cert-item-details">
+                            <h3>Exploring Computers</h3>
+                            <p class="issuer-name">Infosys Springboard</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Vanilla UI Development</span><span>90%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Core Java (Swing UI)</span><span>70%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="70%"></div></div>
-                        </div>
+                        <a href="#" class="cert-link-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
 
-                <!-- Backend & Tools -->
-                <div class="glass-card skill-category-card">
-                    <h3><i class="fas fa-toolbox"></i> Developer Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Git & GitHub Workflows</span><span>90%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="90%"></div></div>
+                    <!-- Cert 2 -->
+                    <div class="glass-card cert-scroll-item border-cyan">
+                        <div class="cert-logo-box pynet-logo">
+                            <span class="logo-txt-blue">Py</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>VS Code Customizations</span><span>95%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="95%"></div></div>
+                        <div class="cert-item-details">
+                            <h3>Networking Fundamentals</h3>
+                            <p class="issuer-name">PyNetLabs</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Docker Containerization</span><span>70%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="70%"></div></div>
+                        <a href="#" class="cert-link-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="glass-card cert-scroll-item border-cyan">
+                        <div class="cert-logo-box outskill-logo">
+                            <span class="logo-txt-orange">Outskill</span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-name-percent"><span>Database Architecture</span><span>80%</span></div>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" data-width="80%"></div></div>
+                        <div class="cert-item-details">
+                            <h3>Generative AI Mastermind</h3>
+                            <p class="issuer-name">Outskill</p>
                         </div>
+                        <a href="#" class="cert-link-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Certifications Grid -->
-            <h2 class="section-title" style="margin-top: 6rem;">Credentials & Certifications</h2>
-            <div class="certs-grid">
-                <!-- Cert 1 -->
-                <div class="glass-card cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <div class="cert-info">
-                        <h4>Python for Data Science</h4>
-                        <div class="cert-issuer">Cognitive Class AI / IBM</div>
-                        <a href="#" class="cert-link">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+            <!-- Right Side: Current Focus -->
+            <div class="focus-column" id="focus">
+                <div class="section-top-tag text-purple">CURRENT FOCUS</div>
+                <div class="focus-cards-grid">
+                    <!-- Card 1 -->
+                    <div class="glass-card focus-grid-card border-purple">
+                        <div class="focus-icon glow-purple"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="focus-card-text">
+                            <h3>Data Structures<br>& Algorithms</h3>
+                        </div>
                     </div>
-                </div>
-                <!-- Cert 2 -->
-                <div class="glass-card cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <div class="cert-info">
-                        <h4>HTML, CSS & JS for Web Dev</h4>
-                        <div class="cert-issuer">Johns Hopkins University (Coursera)</div>
-                        <a href="#" class="cert-link">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card focus-grid-card border-blue">
+                        <div class="focus-icon glow-blue"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div class="focus-card-text">
+                            <h3>Cloud<br>Computing</h3>
+                        </div>
                     </div>
-                </div>
-                <!-- Cert 3 -->
-                <div class="glass-card cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <div class="cert-info">
-                        <h4>Git & GitHub Version Control</h4>
-                        <div class="cert-issuer">Google Career Certificates</div>
-                        <a href="#" class="cert-link">Verify Credential <i class="fas fa-external-link-alt"></i></a>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card focus-grid-card border-cyan">
+                        <div class="focus-icon glow-cyan"><i class="fa-solid fa-globe"></i></div>
+                        <div class="focus-card-text">
+                            <h3>Web<br>Development</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- GitHub contribution board mockup -->
-            <div class="glass-card github-contribution-card reveal">
-                <h3><i class="fab fa-github"></i> Open Source Contributions (Mock Graph)</h3>
-                <div class="git-graph-wrapper">
-                    <div class="git-graph" id="git-contribution-graph">
-                        <!-- Filled by JS -->
-                    </div>
-                </div>
-                <div class="git-graph-footer">
-                    <span>Learn more at <a href="https://github.com/vandanasingh11" target="_blank" style="color: var(--purple); text-decoration: none;">github.com/vandanasingh11</a></span>
-                    <div class="git-graph-legend">
-                        <span>Less</span>
-                        <div class="git-square"></div>
-                        <div class="git-square l-1"></div>
-                        <div class="git-square l-2"></div>
-                        <div class="git-square l-3"></div>
-                        <div class="git-square l-4"></div>
-                        <span>More</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section reveal">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Let's coordinate on new developer opportunities, internships, or open source projects.</p>
-            
-            <div class="contact-grid">
-                <!-- Info links -->
-                <div class="contact-info-panel">
-                    <div>
-                        <h3>Reach Out Directly</h3>
-                        <p>Have an interesting project or opening? I'd love to chat. Reach out via email or connect on social platforms.</p>
-                    </div>
-                    
-                    <div class="contact-channels">
-                        <a href="mailto:vandanasingh001105@gmail.com" class="glass-card contact-channel-card">
-                            <div class="channel-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="channel-details">
-                                <h4>Email Address</h4>
-                                <p>vandanasingh001105@gmail.com</p>
-                            </div>
-                        </a>
-                        
-                        <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank" class="glass-card contact-channel-card">
-                            <div class="channel-icon"><i class="fab fa-linkedin"></i></div>
-                            <div class="channel-details">
-                                <h4>LinkedIn Profile</h4>
-                                <p>linkedin.com/in/vandanasingh011</p>
-                            </div>
-                        </a>
+            <div class="contact-split-grid">
+                <!-- Left details -->
+                <div class="contact-details-side">
+                    <h2 class="contact-title-main">Let's Build Something Great <span class="gradient-text-blue">Together!</span></h2>
+                    <p class="contact-lead-desc">Have a project in mind, want to collaborate, or looking for an intern? I'd love to hear from you!</p>
 
-                        <a href="https://github.com/vandanasingh11" target="_blank" class="glass-card contact-channel-card">
-                            <div class="channel-icon"><i class="fab fa-github"></i></div>
-                            <div class="channel-details">
-                                <h4>GitHub Profile</h4>
-                                <p>github.com/vandanasingh11</p>
-                            </div>
-                        </a>
+                    <div class="contact-links-list">
+                        <div class="contact-link-row">
+                            <span class="contact-link-icon glow-cyan"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:vandanasingh001105@gmail.com" class="contact-link-anchor">vandanasingh001105@gmail.com</a>
+                        </div>
+                        <div class="contact-link-row">
+                            <span class="contact-link-icon glow-purple"><i class="fab fa-linkedin-in"></i></span>
+                            <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank" class="contact-link-anchor">linkedin.com/in/vandanasingh011</a>
+                        </div>
+                        <div class="contact-link-row">
+                            <span class="contact-link-icon glow-pink"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/vandanasingh11" target="_blank" class="contact-link-anchor">github.com/vandanasingh11</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Contact Form -->
-                <div class="glass-card">
-                    <form id="contact-form" onsubmit="handleContactSubmit(event)">
-                        <div class="form-group-row">
-                            <div class="form-group">
-                                <input type="text" id="form-name" class="form-input" placeholder=" " required>
-                                <label for="form-name" class="form-label">Full Name</label>
+
+                <!-- Right Form and Paper Airplane -->
+                <div class="contact-form-side">
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-row-2">
+                                <div class="form-input-box">
+                                    <input type="text" id="form-name" required placeholder="Your Name">
+                                </div>
+                                <div class="form-input-box">
+                                    <input type="email" id="form-email" required placeholder="Your Email">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="email" id="form-email" class="form-input" placeholder=" " required>
-                                <label for="form-email" class="form-label">Email Address</label>
+                            <div class="form-input-box">
+                                <input type="text" id="form-subject" required placeholder="Subject">
                             </div>
+                            <div class="form-input-box">
+                                <textarea id="form-message" required placeholder="Your Message" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn-send-message">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+
+                    <!-- 3D Envelope Decoration -->
+                    <div class="envelope-decoration-graphic">
+                        <div class="envelope-back"></div>
+                        <div class="paper-airplane-glow">
+                            <i class="fa-solid fa-paper-plane plane-icon"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="form-subject" class="form-input" placeholder=" " required>
-                            <label for="form-subject" class="form-label">Subject</label>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 2rem;">
-                            <textarea id="form-message" class="form-input" placeholder=" " required></textarea>
-                            <label for="form-message" class="form-label">Your Message</label>
-                        </div>
-                        
-                        <button type="submit" class="btn-premium btn-premium-primary" style="width: 100%; justify-content: center;">
-                            Send Message &nbsp;<i class="fas fa-paper-plane"></i>
-                        </button>
-                        
-                        <div id="form-status" class="form-status"></div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -505,14 +865,10 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-container">
-            <div class="footer-text">
-                &copy; 2026 Vandana Singh. Made with passion & precision.
-            </div>
-            <div class="footer-socials">
-                <a href="mailto:vandanasingh001105@gmail.com" class="footer-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/vandanasingh011" target="_blank" class="footer-icon-btn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/vandanasingh11" target="_blank" class="footer-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
+            <p>&copy; 2026 Vandana Singh. All rights reserved.</p>
+            <button class="scroll-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Scroll to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
         </div>
     </footer>
 
@@ -526,13 +882,20 @@
         });
 
         // Typewriter Effect
-        const roles = ["Full Stack Developer", "Cloud Enthusiast", "AI Learner"];
+        const roles = [
+            "Software Developer",
+            "BCA Student",
+            "Problem Solver",
+            "Building Real-World Projects",
+            "Exploring AI & Cloud",
+            "Open to Internships"
+        ];
         let currentRoleIdx = 0;
         let currentCharIdx = 0;
         let isDeleting = false;
         const typedRolesSpan = document.getElementById('typed-roles');
-        const typingSpeed = 100;
-        const deletingSpeed = 50;
+        const typingSpeed = 80;
+        const deletingSpeed = 40;
         const pauseTime = 2000;
 
         function typeEffect() {
@@ -558,71 +921,27 @@
         }
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(typeEffect, 1000);
-            generateGithubMockGraph();
         });
 
-        // Stats Counters Animation
-        function animateStats() {
-            const stats = document.querySelectorAll('.stat-num');
-            stats.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                let current = 0;
-                const increment = target / 30; // 30 steps
-                const interval = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        stat.textContent = target + '+';
-                        clearInterval(interval);
-                    } else {
-                        stat.textContent = Math.ceil(current) + '+';
-                    }
-                }, 40);
-            });
-        }
-
-        // Skills Progress Bar Animations & Active Navigation Indicators
-        const skillBars = document.querySelectorAll('.skill-bar-inner');
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        const observerOptions = {
-            threshold: 0.15
-        };
-
-        const statsObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateStats();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statsObserver.observe(document.querySelector('.hero-stats'));
-
+        // Section Reveal Animations
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    
-                    // Specific trigger for skill bars animation inside skills section
-                    if (entry.target.id === 'skills') {
-                        skillBars.forEach(bar => {
-                            const width = bar.getAttribute('data-width');
-                            bar.style.width = width;
-                        });
-                    }
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.15 });
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
         // Sync Active Nav Link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
         window.addEventListener('scroll', () => {
             let currentSec = 'home';
             sections.forEach(sec => {
-                const secTop = sec.offsetTop - 120;
+                const secTop = sec.offsetTop - 150;
                 if (window.scrollY >= secTop) {
                     currentSec = sec.getAttribute('id');
                 }
@@ -636,124 +955,139 @@
             });
         });
 
-        // Generate Mock GitHub Contribution Grid
-        function generateGithubMockGraph() {
-            const graph = document.getElementById('git-contribution-graph');
-            const totalSquares = 53 * 7; // columns x rows
-            
-            // Loop through columns
-            for (let i = 0; i < 53; i++) {
-                const col = document.createElement('div');
-                col.className = 'git-col';
+        // Stats Counters Animation
+        function animateStats(container) {
+            const stats = container.querySelectorAll('.stat-value');
+            stats.forEach(stat => {
+                if (stat.classList.contains('animated')) return;
+                stat.classList.add('animated');
                 
-                for (let j = 0; j < 7; j++) {
-                    const square = document.createElement('div');
-                    square.className = 'git-square';
-                    
-                    // Add random density levels
-                    const rand = Math.random();
-                    let level = '';
-                    let contributions = 0;
-                    if (rand > 0.85) { level = 'l-4'; contributions = Math.floor(Math.random() * 8) + 12; }
-                    else if (rand > 0.70) { level = 'l-3'; contributions = Math.floor(Math.random() * 5) + 7; }
-                    else if (rand > 0.50) { level = 'l-2'; contributions = Math.floor(Math.random() * 4) + 3; }
-                    else if (rand > 0.25) { level = 'l-1'; contributions = Math.floor(Math.random() * 2) + 1; }
-                    
-                    if (level) {
-                        square.classList.add(level);
-                    }
-                    
-                    // Simple simulated dates for tooltip
-                    const date = new Date();
-                    date.setDate(date.getDate() - (totalSquares - (i * 7 + j)));
-                    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-                    square.setAttribute('data-tooltip', `${contributions} contributions on ${dateStr}`);
-                    
-                    col.appendChild(square);
+                const targetText = stat.getAttribute('data-target');
+                const target = parseFloat(targetText);
+                
+                // Specific decimal animation for CGPA
+                if (targetText === "7") {
+                    let current = 0.0;
+                    const interval = setInterval(() => {
+                        current += 0.266;
+                        if (current >= 7.98) {
+                            stat.textContent = "7.98";
+                            clearInterval(interval);
+                        } else {
+                            stat.textContent = current.toFixed(2);
+                        }
+                    }, 40);
+                } else {
+                    let current = 0;
+                    const increment = target / 20;
+                    const interval = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            stat.textContent = target + '+';
+                            clearInterval(interval);
+                        } else {
+                            stat.textContent = Math.ceil(current) + '+';
+                        }
+                    }, 50);
                 }
-                graph.appendChild(col);
-            }
+            });
         }
+
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.about-stats-row, .hero-stats-bar').forEach(el => {
+            statsObserver.observe(el);
+        });
 
         // Floating Hero Particles Canvas
         const canvas = document.getElementById('hero-particles');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let particles = [];
 
-        function resizeCanvas() {
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 0.5;
+                    this.speedX = Math.random() * 0.4 - 0.2;
+                    this.speedY = Math.random() * 0.4 - 0.2;
+                    this.color = Math.random() > 0.5 ? 'rgba(167, 139, 250, 0.4)' : 'rgba(34, 211, 238, 0.3)';
+                }
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+
+                    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+                }
+                draw() {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.closePath();
+                    ctx.fill();
+                }
+            }
+
+            function initParticles() {
+                particles = [];
+                const count = Math.min(Math.floor(canvas.width / 15), 60);
+                for (let i = 0; i < count; i++) {
+                    particles.push(new Particle());
+                }
+            }
+            initParticles();
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
         }
 
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5;
-                this.speedX = Math.random() * 0.4 - 0.2;
-                this.speedY = Math.random() * 0.4 - 0.2;
-                this.color = Math.random() > 0.5 ? 'rgba(139, 92, 246, 0.4)' : 'rgba(6, 182, 212, 0.3)';
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-            }
-            draw() {
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fill();
-            }
-        }
-
-        function initParticles() {
-            particles = [];
-            const count = Math.min(Math.floor(canvas.width / 15), 80);
-            for (let i = 0; i < count; i++) {
-                particles.push(new Particle());
-            }
-        }
-        initParticles();
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-
-        // Contact Form Mock Submission Handler
+        // Contact Form Submission Handler
         function handleContactSubmit(e) {
             e.preventDefault();
             const status = document.getElementById('form-status');
             const submitBtn = e.target.querySelector('button[type="submit"]');
-            
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Sending Message <i class="fas fa-spinner fa-spin"></i>';
-            
+
             setTimeout(() => {
                 status.className = 'form-status success';
                 status.textContent = 'Thank you! Your message has been sent successfully.';
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message &nbsp;<i class="fas fa-paper-plane"></i>';
+                submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
                 e.target.reset();
-                
-                // Clear success message after 5 seconds
+
                 setTimeout(() => {
-                    status.style.display = 'none';
+                    status.textContent = '';
+                    status.className = 'form-status';
                 }, 5000);
             }, 1800);
         }
     </script>
 </body>
+
 </html>
